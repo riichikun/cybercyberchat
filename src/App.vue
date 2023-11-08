@@ -31,7 +31,7 @@
             <footer>
                 <form @submit.prevent="SendMessage" class="flex gap-[10px]">
                     <input class="border border-red-500 h-[50px] w-[50%] md:w-[300px]" type="text" v-model="inputMessage">
-                    <input class="border border-red-500 h-[50px] w-[50%] md:w-[100px]" type="submit" value="Send">
+                    <input @click="SendMessage" class="border border-red-500 h-[50px] w-[50%] md:w-[100px]" type="submit" value="Send">
                 </form>
             </footer>
         </div>
@@ -48,7 +48,7 @@
                     <input type="text" placeholder="Name" class="border border-black h-[50px] sm:w-[50%] md:w-[100%]" v-model="username">
                     <input type="email" placeholder="Email" class="border border-black h-[50px] sm:w-[50%] md:w-[100%]" v-model="email">
                     <input type="password" placeholder="Password" class="border border-black h-[50px] sm:w-[50%] md:w-[100%]" v-model="password">
-                    <input type="submit" value="Submit" class='bg-white border border-black h-[50px] sm:w-[50%] md:w-[100%]  py-[10px] font-[800]' >
+                    <input @click="Register" type="submit" value="Submit" class='bg-white border border-black h-[50px] sm:w-[50%] md:w-[100%]  py-[10px] font-[800]' >
                 </form>
             </div>
             <button @click="state.signing=false" className="w-[50%] sm:w-[20%]  ml-[50%] mt-[10px] sm:ml-[80%] h-fit-content text-[11px] sm:text-[14px] md:text-[18px] lg:text-[24px] text-white bg-yellow-500 border-black border-r-2 border-l-4 border-b-4 font-[400] rounded-xl">No, I'm alrealy signed up!</button>
