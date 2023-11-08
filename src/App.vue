@@ -73,11 +73,10 @@ export default {
         const password = ref("")
         const inputUsername = ref("");
         const inputMessage = ref("");
-        const chatbox = ref('')
 
-        const auth = getAuth(app)
+        const auth :any = getAuth(app)
 
-        const state = reactive({
+        const state:{username: string, messages: Array<any>, signing: boolean} = reactive({
             username: '',
             messages: [],
             signing: false,
@@ -113,7 +112,7 @@ export default {
                 setPersistence(auth, browserLocalPersistence).then(() => {
                     signInWithEmailAndPassword(auth, email.value, password.value)
                 .then(() => {
-                    state.username = auth.currentUser.displayName
+                    if(auth.currentUser) state.username = auth.currentUser.displayName 
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -136,7 +135,8 @@ export default {
             if(inputMessage.value == '') {
                 return
             }
-            const message = {
+            const message: {key: any, username: string, content: any} = {
+                key: '',
                 username: state.username,
                 content: inputMessage.value,
             }
@@ -169,7 +169,7 @@ export default {
             const messagesListRef = dbref(db, 'messages');
             onValue(messagesListRef, async (snapshot) => {
                 const data = snapshot.val()
-                let messages = [];
+                let messages: any[] = [];
 
                 await Object.keys(data).forEach(key => {
                     messages.push({id: key, username: data[key].username, content: data[key].content})
@@ -177,9 +177,9 @@ export default {
                 state.messages = messages;
 
                 setTimeout(() => {
-                    let chatbox_ = document.querySelector('.chatbox')
-                    let scrollHeight = chatbox_.scrollHeight
-                    chatbox_.scrollTop = scrollHeight
+                    let chatbox_ :any = document.querySelector('.chatbox')
+                    let scrollHeight = chatbox_?.scrollHeight
+                    if(chatbox_) chatbox_.scrollTop = scrollHeight
                 })
             
             
