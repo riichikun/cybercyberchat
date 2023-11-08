@@ -154,14 +154,14 @@ export default {
 
             // making chatbox scrolled down by default
             
-/*
+
             setTimeout(() => {
                 let chatbox_ = document.querySelector('.chatbox')
                 let scrollHeight = chatbox_.scrollHeight
                 chatbox_.scrollTop = scrollHeight
             }, 650)
 
-            */
+            
             
 
 
