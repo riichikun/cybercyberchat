@@ -156,9 +156,9 @@ export default {
             
 
             setTimeout(() => {
-                let chatbox_ = document.querySelector('.chatbox')
-                let scrollHeight = chatbox_.scrollHeight
-                chatbox_.scrollTop = scrollHeight
+                let chatbox_ :any = document.querySelector('.chatbox')
+                
+                chatbox_.scrollTop = chatbox_.scrollHeight
             }, 650)
 
             
