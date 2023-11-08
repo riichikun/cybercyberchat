@@ -104,7 +104,7 @@ export default {
                 const errorMessage = error.message;
                 // ..
             });
-            
+            state.signing = false
         }
 
         const Login = () => {
