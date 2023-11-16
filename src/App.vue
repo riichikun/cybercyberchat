@@ -41,7 +41,7 @@
             <div class='main-block h-[100%] flex flex-col sm:flex-row  border-black border-2 border-l-4 border-b-4'>
                 <div class="flex items-center font-[800] border-b border-b-black border-b-2 sm:border-r sm:border-r-black sm:border-r-2 py-[30px] px-[10%] sm:w-[50%] bg-[#fff] text-[#19B] text-[12px] lg:text-[24px]">
                     <div class="w-[100%] sm:h-fit-content">
-                        <p class="h-fit-content">Then let's create the account</p>
+                        <p class="h-fit-content">Then let's create the account. But don't forget to make your password at least 6 characters long.</p>
                     </div>
                 </div>
                 <form @submit.prevent="Register" class="bg-[url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F032%2F476%2F835%2Foriginal%2Fdirection-indicators-seamless-pattern-naive-playful-arrow-pointers-with-texture-in-trendy-retro-style-y2k-aesthetic-dynamic-arrow-signs-for-design-vector.jpg&f=1&nofb=1&ipt=5e7d51a22629f418724059f4eb41ad1e33dc6d230f38aae10a790edefa0b4608&ipo=images)] flex flex-col gap-[10px] px-[25%] sm:px-[10%] py-[5%] h-[50%] sm:h-[100%] w-[100%] sm:w-[50%]">
