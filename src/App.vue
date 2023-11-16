@@ -141,7 +141,7 @@ export default {
                 content: inputMessage.value,
             }
 
-            const messagesListRef = dbref(db, 'messages');
+            const messagesListRef = dbref(db, 'messages1');
             const newMessageRef = dbpush(messagesListRef);
             set(newMessageRef, message)
             inputMessage.value = '';
@@ -159,14 +159,14 @@ export default {
                 let chatbox_ :any = document.querySelector('.chatbox')
                 
                 chatbox_.scrollTop = chatbox_.scrollHeight
-            }, 650)
+            }, 1050)
 
             
             
 
 
             
-            const messagesListRef = dbref(db, 'messages');
+            const messagesListRef = dbref(db, 'messages1');
             onValue(messagesListRef, async (snapshot) => {
                 const data = snapshot.val()
                 let messages: any[] = [];
